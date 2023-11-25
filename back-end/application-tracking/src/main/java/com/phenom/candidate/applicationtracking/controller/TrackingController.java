@@ -53,4 +53,11 @@ public class TrackingController {
 		return jobApplications;
 	}
 
+	@GetMapping("/getAllJobApplicationsInAppliedStatusByCandidateId/{candId}")
+	public List<JobApplication> getAllJobApplicationsInAppliedStatusByCandidateId(@PathVariable Integer candId){
+		List<JobApplication> jobApplications = null;
+		jobApplications = JobsDao.getAllJobApplicationsInAppliedStatusByCandidateId(candId);
+		return jobApplications;
+
+	}
 }
