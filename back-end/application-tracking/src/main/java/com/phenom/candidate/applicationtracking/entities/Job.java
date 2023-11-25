@@ -4,7 +4,7 @@ import jakarta.persistence.Entity;
 
 import java.util.Arrays;
 import java.util.List;
-@Entity
+//@Entity
 
 public class Job {
 	private int id;

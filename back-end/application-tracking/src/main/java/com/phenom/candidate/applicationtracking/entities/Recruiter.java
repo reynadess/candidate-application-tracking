@@ -2,7 +2,7 @@ package com.phenom.candidate.applicationtracking.entities;
 
 import jakarta.persistence.Entity;
 
-@Entity
+//@Entity
 
 public class Recruiter {
 	private int id;
