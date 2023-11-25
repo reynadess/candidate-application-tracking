@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/searches")
@@ -25,6 +26,13 @@ public class TrackingController {
 	@GetMapping("/getAllJobs") public List<Job> getAllJobs() {
 		List<Job> jobs = null;
 		jobs = JobsDao.getAllJobs();
+		return jobs;
+	}
+
+	@GetMapping("/getJobsById/{id}")
+	public List<Job> getJobsById(@PathVariable Integer id ) {
+		List<Job> jobs = null;
+		jobs = JobsDao.getAllJobs().stream().filter(d-> d.getId() == id).collect(Collectors.toList());
 		return jobs;
 	}
 
