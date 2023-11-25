@@ -50,14 +50,14 @@ public class JobsDao {
 	public static List<JobApplication> getAllJobApplications() {
 		List<JobApplication> applications = new ArrayList<>();
 		applications.add(new JobApplication(1, 2, "APPLIED"));
-		applications.add(new JobApplication(2, 2, "APLLIED"));
+		applications.add(new JobApplication(2, 2, "APPLIED"));
 		applications.add(new JobApplication(1, 3, "INPROC"));
-		applications.add(new JobApplication(2, 4, "APLLIED"));
-		applications.add(new JobApplication(2, 5, "APLLIED"));
+		applications.add(new JobApplication(2, 4, "APPLIED"));
+		applications.add(new JobApplication(2, 5, "APPLIED"));
 		applications.add(new JobApplication(5, 1, "DORMANT"));
-		applications.add(new JobApplication(5, 2, "APLLIED"));
-		applications.add(new JobApplication(3, 2, "APLLIED"));
-		applications.add(new JobApplication(4, 2, "APLLIED"));
+		applications.add(new JobApplication(5, 2, "APPLIED"));
+		applications.add(new JobApplication(3, 2, "APPLIED"));
+		applications.add(new JobApplication(4, 2, "APPLIED"));
 		applications.add(new JobApplication(3, 3, "REJECTED"));
 		return applications;
 	}
