@@ -6,10 +6,7 @@ import com.phenom.candidate.applicationtracking.entities.Job;
 import com.phenom.candidate.applicationtracking.entities.JobApplication;
 import com.phenom.candidate.applicationtracking.entities.Recruiter;
 import com.phenom.candidate.applicationtracking.service.JobRanking;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +46,8 @@ public class TrackingController {
 		return jobApplications;
 	}
 
-	@GetMapping("/getAllJobApplicationsInAppliedStatusByJobId/{jobId}") public List<JobApplication> getAllJobApplicationsInAppliedStatusByJobId(int jobId) {
+	@GetMapping("/getAllJobApplicationsInAppliedStatusByJobId/{jobId}")
+	public List<JobApplication> getAllJobApplicationsInAppliedStatusByJobId(@PathVariable Integer jobId) {
 		List<JobApplication> jobApplications = null;
 		jobApplications = JobsDao.getAllJobApplicationsInAppliedStatusByJobId(jobId);
 		return jobApplications;
