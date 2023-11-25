@@ -3,6 +3,7 @@ package com.phenom.candidate.applicationtracking.dao;
 import com.phenom.candidate.applicationtracking.entities.Candidate;
 import com.phenom.candidate.applicationtracking.entities.Job;
 import com.phenom.candidate.applicationtracking.entities.JobApplication;
+import com.phenom.candidate.applicationtracking.entities.Recruiter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,6 +34,17 @@ public class JobsDao {
 		jobs.add(new Job(4, "Developer", "LLOYDS", 4, Arrays.asList("3", "5")));
 		jobs.add(new Job(5, "Developer", "Audintel", 5, Arrays.asList("2", "4", "7")));
 		return jobs;
+	}
+
+	public static List<Recruiter> getAllRecruiters(){
+		List<Recruiter> recruiters = new ArrayList<>();
+		recruiters.add(new Recruiter(1,"Satya","MorganChase"));
+		recruiters.add(new Recruiter(2,"Satya","WellsFargo"));
+		recruiters.add(new Recruiter(3,"Satya","ValueLabs"));
+		recruiters.add(new Recruiter(4,"Satya","TCS"));
+		recruiters.add(new Recruiter(5,"Satya","Infy"));
+		return recruiters;
+
 	}
 
 	public static List<JobApplication> getAllJobApplications() {

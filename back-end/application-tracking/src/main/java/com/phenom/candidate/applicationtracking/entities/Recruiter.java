@@ -5,6 +5,15 @@ public class Recruiter {
 	private String name;
 	private String company;
 
+	public Recruiter() {
+	}
+
+	public Recruiter(int id, String name, String company) {
+		this.id = id;
+		this.name = name;
+		this.company = company;
+	}
+
 	public int getId() {
 		return id;
 	}
