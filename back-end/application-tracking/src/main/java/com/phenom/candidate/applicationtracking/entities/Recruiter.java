@@ -1,5 +1,9 @@
 package com.phenom.candidate.applicationtracking.entities;
 
+import jakarta.persistence.Entity;
+
+@Entity
+
 public class Recruiter {
 	private int id;
 	private String name;

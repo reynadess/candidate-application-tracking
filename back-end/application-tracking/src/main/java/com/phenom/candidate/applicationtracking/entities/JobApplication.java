@@ -1,5 +1,9 @@
 package com.phenom.candidate.applicationtracking.entities;
 
+import jakarta.persistence.Entity;
+
+@Entity
+
 public class JobApplication {
 	static int ids = 1;
 	private int jobApplicationId;

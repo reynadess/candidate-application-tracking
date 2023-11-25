@@ -1,7 +1,10 @@
 package com.phenom.candidate.applicationtracking.entities;
 
+import jakarta.persistence.Entity;
+
 import java.util.Arrays;
 import java.util.List;
+@Entity
 
 public class Job {
 	private int id;
