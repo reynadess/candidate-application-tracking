@@ -19,19 +19,20 @@ public class CandidateJobComparator {
     int currIdx = 0;
     for (int i = job1Skills.size() - 1; i >= 0; i--) {
       if (candidateSkills.contains(job1Skills.get(i))) {
-        job1FitScore = (2 ^ currIdx);
+        job1FitScore = (int) Math.pow(2, currIdx);
       }
       currIdx += 1;
     }
 
+    currIdx = 0;
     for (int i = job2Skills.size() - 1; i >= 0; i--) {
       if (candidateSkills.contains(job2Skills.get(i))) {
-        job2FitScore = (2 ^ currIdx);
+        job2FitScore = (int) Math.pow(2, currIdx);
       }
       currIdx += 1;
     }
 
-    if (job1FitScore < job2FitScore) {
+    if (job1FitScore <= job2FitScore) {
       return -1;
     } else {
       return 1;
