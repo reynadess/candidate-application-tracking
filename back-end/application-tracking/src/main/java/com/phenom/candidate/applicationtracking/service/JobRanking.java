@@ -7,14 +7,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JobRanking {
-  public List<Job> getJobsBasedOnCandidateSkills(Candidate candidate) {
+  public static List<Job> getJobsBasedOnCandidateSkills(Candidate candidate) {
     List<String> candidateSkills = candidate.getSkillset();
     List<Job> jobs = JobsDao.getAllJobs();
     sortJobs(candidate, jobs, 0, jobs.size() - 1);
     return jobs;
   }
 
-  private void sortJobs(Candidate candidate, List<Job> jobs, int low, int high) {
+  private static void sortJobs(Candidate candidate, List<Job> jobs, int low, int high) {
     if (low >= high) {
       return;
     }
@@ -24,7 +24,7 @@ public class JobRanking {
     mergeJobs(candidate, jobs, low, mid + 1, high);
   }
 
-  private void mergeJobs(Candidate candidate, List<Job> jobs, int low, int mid, int high) {
+  private static void mergeJobs(Candidate candidate, List<Job> jobs, int low, int mid, int high) {
     int low1 = low;
     int high1 = mid - 1;
     int low2 = mid;
@@ -43,10 +43,12 @@ public class JobRanking {
 
     while (low1 <= high1) {
       newJobs.add(jobs.get(low1));
+      low1 += 1;
     }
 
     while (low2 <= high) {
       newJobs.add(jobs.get(low2));
+      low2 += 1;
     }
 
     for (Job job: newJobs) {
