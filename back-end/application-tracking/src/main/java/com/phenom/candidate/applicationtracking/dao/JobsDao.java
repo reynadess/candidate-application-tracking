@@ -14,16 +14,16 @@ public class JobsDao {
 		candidates.add(new Candidate(1, "Chaitanya", "Hyderabad",
 				"Software Engineer", 1200000,3.5, Arrays.asList("Java", "SQL", "Python", "DSA", "Snowflake")));
 
-		candidates.add(new Candidate(1, "Tagore", "Hyderabad",
+		candidates.add(new Candidate(2, "Tagore", "Hyderabad",
 				"Sr.Software Engineer", 1400000,3.9, Arrays.asList("Java", "SQL", "Python")));
 
-		candidates.add(new Candidate(1, "Nikhil", "Bangalore",
+		candidates.add(new Candidate(3, "Nikhil", "Bangalore",
 				"Trainee Engineer", 800000,2, Arrays.asList("Python", "DSA", "Snowflake")));
 
-		candidates.add(new Candidate(1, "Govind", "Pune",
+		candidates.add(new Candidate(4, "Govind", "Pune",
 				"Lead Engineer", 1300000,5.5, Arrays.asList("Java", "SQL", "DSA", "Snowflake")));
 
-		candidates.add(new Candidate(1, "Murali", "Hyderabad",
+		candidates.add(new Candidate(5, "Murali", "Hyderabad",
 				"Sr.Software Engineer", 1300000,3.4, Arrays.asList( "SQL",  "DSA", "Snowflake")));
 		return candidates;
 	}
