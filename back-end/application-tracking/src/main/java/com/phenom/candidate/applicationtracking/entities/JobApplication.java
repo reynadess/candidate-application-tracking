@@ -1,10 +1,22 @@
 package com.phenom.candidate.applicationtracking.entities;
 
 public class JobApplication {
+	static int ids = 1;
 	private int jobApplicationId;
 	private int jobId;
 	private int candidateId;
-	private int status;
+	private String status;
+
+	public JobApplication( int jobId, int candidateId, String status) {
+		this.jobApplicationId = ids++;
+		this.jobId = jobId;
+		this.candidateId = candidateId;
+		this.status = status;
+	}
+
+	public JobApplication() {
+	}
+
 
 	public int getJobApplicationId() {
 		return jobApplicationId;
@@ -30,11 +42,11 @@ public class JobApplication {
 		this.candidateId = candidateId;
 	}
 
-	public int getStatus() {
+	public String getStatus() {
 		return status;
 	}
 
-	public void setStatus(int status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
 }
